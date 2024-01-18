@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Authentication System</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Admin Interface -->
+        <div id="admin-interface" class="hidden">
+            <h2>Admin Dashboard</h2>
+            <table id="user-table">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Photo</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- User Table Content -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- User Interface -->
+        <div id="user-interface" class="hidden">
+            <h2>User Dashboard</h2>
+            <div>
+                <p>User ID: <span id="user-id"></span></p>
+                <p>Name: <span id="user-name"></span></p>
+                <img id="user-photo" alt="User Photo">
+                <p>Approval Status: <span id="approval-status"></span></p>
+                <button id="view-details-btn" disabled>View Details</button>
+            </div>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-form">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Create User Form -->
+        <div id="create-user-form" class="hidden">
+            <h2>Create User</h2>
+            <form id="create-user-form">
+                <label for="new-username">New Username:</label>
+                <input type="text" id="new-username" required>
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" required>
+                <button type="submit">Create User</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
